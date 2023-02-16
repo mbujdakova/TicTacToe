@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "tic-tac-toe"
+version = "0.1.0"
+description = "Tic Tac Toe Kata"
+authors = ["Martina Bujdakova <Martina.Bujdakova@ibm.com>"]
+license = "MIT"
+keywords = ["python"]
+packages = [{ include = "TicTacToe", from = "module" }]
+
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.942"
+pyproject-flake8 = "*"
+pytest = "^7.1.2"
+pytest-pspec = "^0.0.4"
+pytest-clarity = "^1.0.1"
+pytest-cov = "^3.0.0"
+pytest-watch = "^4.2.0"
+pytest-describe = "^2.0.1"
+pylint = "^2.14.5"
+black = "^22.6.0"
+pytest-describe-it = "^0.1.0"
+
+
+# Test 
+[tool.pytest.ini_options]
+python_files = [ "*test*.py",]
+python_functions = [ "test",]
+minversion = "7.0"
+addopts = "-p no:warnings --cov --cov-config=.coveragerc --cov-report=term-missing"
+testpaths = [ "test",]
