@@ -1,5 +1,4 @@
 import random
-import time
 def create_board():
     board = [' '] * 9
     return board
