@@ -38,3 +38,11 @@ def check_win(board):
             return board[position[0]] if board[position[0]] != ' ' else None
     if ' ' not in board:
         return 'Draw'
+
+def render_board(board):
+    row1 = " {} | {} | {} ".format(board[0], board[1], board[2])
+    row2 = " {} | {} | {} ".format(board[3], board[4], board[5])
+    row3 = " {} | {} | {} ".format(board[6], board[7], board[8])
+    divider = "---+---+----"
+    board_with_grid = "\n".join([row1, divider, row2, divider, row3])
+    return board_with_grid

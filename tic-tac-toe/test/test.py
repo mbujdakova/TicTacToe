@@ -1,4 +1,4 @@
-from TicTacToe import create_board, choose_starting_player, switch_player, get_available_moves, player_move, make_move, check_win
+from TicTacToe import create_board, choose_starting_player, switch_player, get_available_moves, player_move, make_move, check_win, render_board
 from unittest.mock import patch
 
 def test_create_board():
@@ -86,3 +86,9 @@ def test_check_win():
              'X', 'X', 'O']
     assert check_win(board) == 'Draw'
 
+def test_render_board():
+    board = ['X', 'O', 'X', 
+             'O', 'X', 'O', 
+             'X', 'O', 'X']
+    expected_output = " X | O | X \n---+---+----\n O | X | O \n---+---+----\n X | O | X "
+    assert render_board(board) == expected_output
