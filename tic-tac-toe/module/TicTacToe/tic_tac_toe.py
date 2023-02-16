@@ -5,3 +5,9 @@ def create_board():
 
 def choose_starting_player():
     return random.choice(['X', 'O'])
+
+def switch_player(player):
+    if player == 'X':
+        return 'O'
+    else:
+        return 'X'

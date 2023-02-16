@@ -11,7 +11,7 @@ Pomodoro 1:
 
 Pomodoro 2:
 
-[] create function for switching players
+[x] create function for switching players
         eg. input - 'X'
             output - 'O'
     [] test for the switching players function 

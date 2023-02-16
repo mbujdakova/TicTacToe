@@ -1,4 +1,4 @@
-from TicTacToe import create_board, choose_starting_player
+from TicTacToe import create_board, choose_starting_player, switch_player
 from unittest.mock import patch
 
 def test_create_board():
@@ -16,3 +16,10 @@ def test_choose_starting_player(mock_choice):
     """
     assert choose_starting_player() == 'X'
     mock_choice.assert_called_once_with(['X', 'O'])
+
+
+def test_switch_player():
+    assert switch_player('X') == 'O'
+    assert switch_player('O') == 'X'
+
+    
