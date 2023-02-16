@@ -44,7 +44,9 @@ def test_get_available_moves():
 
 @patch('random.choice', return_value=4)
 def test_player_move(mock_choice):
- 
+    """
+    test the randomly chosen move 4 of user X using patch and see the expected move and resulting board 
+    """
     board = ['O', 'X', 'O', ' ', ' ', 'X', ' ', ' ', 'X']
     player = 'X'
     exp_move = player_move(board, player)
@@ -52,6 +54,9 @@ def test_player_move(mock_choice):
     assert exp_move == 4
 
 def test_make_move():
+    """
+    test move 4 of user X  see the resulting board 
+    """
     board = ['X', 'O', 'X', 'O', ' ', ' ', ' ', ' ', ' ']
     move = 4
     player = 'X'
@@ -59,6 +64,9 @@ def test_make_move():
     assert board == ['X', 'O', 'X', 'O', 'X', ' ', ' ', ' ', ' ']
 
 def test_check_win():
+    """
+    check the win for 4 possible scenarios 
+    """
     #initialization (empty board)
     board = create_board()
     assert check_win(board) is None
@@ -88,6 +96,9 @@ def test_check_win():
     assert check_win(board) == 'Draw'
 
 def test_render_board():
+    """
+    test the result of render_board function with filled postions in board 
+    """
     board = ['X', 'O', 'X', 
              'O', 'X', 'O', 
              'X', 'O', 'X']
@@ -95,12 +106,18 @@ def test_render_board():
     assert render_board(board) == expected_output
 
 def test_initialize_game(capsys):
+    """
+    test the printed result of the inizialization of the game
+    """
     expected_output = "Game Board Creation...\n\n   |   |   \n---+---+----\n   |   |   \n---+---+----\n   |   |   \n\nBoard Created.\n"
     board = initialize_game()
     captured_output = capsys.readouterr().out
     assert captured_output == expected_output
 
 def test_play_game(capsys):
+    """
+    test if the final verdict is present in captured output of the play_game function 
+    """
     play_game()
     out, err = capsys.readouterr()
     output = out.replace('\n', '')

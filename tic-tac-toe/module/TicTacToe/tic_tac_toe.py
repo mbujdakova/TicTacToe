@@ -1,4 +1,5 @@
 import random
+import time
 def create_board():
     board = [' '] * 9
     return board
@@ -59,6 +60,7 @@ def play_game():
     current_player = choose_starting_player()
     print("The game will start with player", current_player)
     while not check_win(board):
+        time.sleep(2)
         player_move(board, current_player)
         print(f"\nPlayer {current_player}:")
         print(render_board(board))
