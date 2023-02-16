@@ -1,4 +1,4 @@
-from TicTacToe import create_board, choose_starting_player, switch_player, get_available_moves, player_move, make_move
+from TicTacToe import create_board, choose_starting_player, switch_player, get_available_moves, player_move, make_move, check_win
 from unittest.mock import patch
 
 def test_create_board():
@@ -56,4 +56,33 @@ def test_make_move():
     player = 'X'
     make_move(board, move, player)
     assert board == ['X', 'O', 'X', 'O', 'X', ' ', ' ', ' ', ' ']
+
+def test_check_win():
+    #initialization (empty board)
+    board = create_board()
+    assert check_win(board) is None
+
+    #vertical win
+    board = ['X', ' ', ' ', 
+             'X', 'O', ' ',
+             'X', ' ', 'O']
+    assert check_win(board) == 'X'
+
+    # horizontal win
+    board = ['X', ' ', 'X', 
+             'O', 'O', 'O',
+             'X', ' ', ' ']
+    assert check_win(board) == 'O'
+
+
+    #diagonal win
+    board = ['X', ' ', ' ', 
+             'O', 'X', ' ',
+             'O', ' ', 'X']
+    assert check_win(board) == 'X'
+
+    board = ['X', 'O', 'X', 
+             'O', 'O', 'X', 
+             'X', 'X', 'O']
+    assert check_win(board) == 'Draw'
 
