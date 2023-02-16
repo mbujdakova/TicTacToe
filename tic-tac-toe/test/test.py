@@ -1,4 +1,4 @@
-from TicTacToe import create_board, choose_starting_player, switch_player, get_available_moves, player_move, make_move, check_win, render_board
+from TicTacToe import create_board, choose_starting_player, switch_player, get_available_moves, player_move, make_move, check_win, render_board, initialize_game
 from unittest.mock import patch
 
 def test_create_board():
@@ -92,3 +92,9 @@ def test_render_board():
              'X', 'O', 'X']
     expected_output = " X | O | X \n---+---+----\n O | X | O \n---+---+----\n X | O | X "
     assert render_board(board) == expected_output
+
+def test_initialize_game(capsys):
+    expected_output = "Game Board Creation...\n\n   |   |   \n---+---+----\n   |   |   \n---+---+----\n   |   |   \n\nBoard Created.\n"
+    board = initialize_game()
+    captured_output = capsys.readouterr().out
+    assert captured_output == expected_output

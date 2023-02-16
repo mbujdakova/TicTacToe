@@ -1,4 +1,5 @@
 import random
+import time
 def create_board():
     board = [' '] * 9
     return board
@@ -46,3 +47,11 @@ def render_board(board):
     divider = "---+---+----"
     board_with_grid = "\n".join([row1, divider, row2, divider, row3])
     return board_with_grid
+
+def initialize_game():
+    board = create_board()
+    print("Game Board Creation...\n")
+    print(render_board(board))
+    print("\nBoard Created.")
+    return board 
+
