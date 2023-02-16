@@ -31,3 +31,18 @@ Pomodoro 4:
 [x] create a function for checking winner (with all possible scenarios)
     [x] test scenarios (horizontaly, vertically, draw)
 [x] create function for rendering a board 
+
+Pomodoro 5:
+[] implement logic of the game 
+    - start with empty board 
+    Game Board Creation... 
+            | |  
+            -+-+- 
+            | |  
+            -+-+- 
+            | | 
+            
+    Board Created.
+[] create function game which combines all functions
+[] add sleeptime to the function
+[] refactor 
