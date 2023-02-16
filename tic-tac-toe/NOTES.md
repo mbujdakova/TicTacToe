@@ -20,5 +20,5 @@ Pomodoro 2:
             output - list with indexes of free spots in board
 [] create function for randomly chosen move from list of free spots
 
-
+Pomodoro 3:
 
