@@ -33,7 +33,7 @@ Pomodoro 4:
 [x] create function for rendering a board 
 
 Pomodoro 5:
-[] implement logic of the game 
+[x] implement logic of the game 
     - start with empty board 
     Game Board Creation... 
             | |  
