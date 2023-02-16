@@ -8,3 +8,17 @@ Pomodoro 1:
     [x] test - check expected board and length of the list 
 [x] create function  choose_starting_player() for randomly chosen first player (X or O)
     [x] test for function
+
+Pomodoro 2:
+
+[] create function for switching players
+        eg. input - 'X'
+            output - 'O'
+    [] test for the switching players function 
+[] create function for checking the available moves (free spots)
+            input - board (as a list)
+            output - list with indexes of free spots in board
+[] create function for randomly chosen move from list of free spots
+
+
+
