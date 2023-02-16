@@ -26,3 +26,8 @@ Pomodoro 3:
 [x] create function for making move (random move)
     [x] test 
 
+Pomodoro 4:
+[] refactor code
+[] create a function for checking winner (with all possible scenarios)
+    [] test scenarios (horizontaly, vertically, draw)
+[] create function for rendering a board 
