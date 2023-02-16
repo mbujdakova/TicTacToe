@@ -28,6 +28,6 @@ Pomodoro 3:
 
 Pomodoro 4:
 [x] refactor code
-[] create a function for checking winner (with all possible scenarios)
-    [] test scenarios (horizontaly, vertically, draw)
-[] create function for rendering a board 
+[x] create a function for checking winner (with all possible scenarios)
+    [x] test scenarios (horizontaly, vertically, draw)
+[x] create function for rendering a board 
