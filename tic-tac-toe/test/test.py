@@ -44,6 +44,7 @@ def test_get_available_moves():
 
 @patch('random.choice', return_value=4)
 def test_player_move(mock_choice):
+ 
     board = ['O', 'X', 'O', ' ', ' ', 'X', ' ', ' ', 'X']
     player = 'X'
     exp_move = player_move(board, player)

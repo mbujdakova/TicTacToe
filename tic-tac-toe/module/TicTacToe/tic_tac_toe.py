@@ -54,3 +54,20 @@ def initialize_game():
     print("\nBoard Created.")
     return board 
 
+def play_game():
+    board = initialize_game()
+    current_player = choose_starting_player()
+    print("The game will start with player", current_player)
+    while not check_win(board):
+        player_move(board, current_player)
+        print(f"\nPlayer {current_player}:")
+        print(render_board(board))
+        current_player = switch_player(current_player)
+    result = check_win(board)
+    if result == 'Draw':
+        return print("\nGAME ENDS WITH A DRAW!")
+    else:
+        return print(f"\nPLAYER {result} WON!")
+
+if __name__ == "__main__":
+    play_game()
