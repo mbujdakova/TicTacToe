@@ -46,3 +46,9 @@ Pomodoro 5:
 [] create function game which combines all functions
 [] add sleeptime to the function
 [] refactor 
+
+Pomodoro 6:
+[] create function game which combines all functions
+    [] test the scenarios (draw or win of X/O)
+[] add sleeptime to the function
+[] refactor 
