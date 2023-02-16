@@ -4,7 +4,7 @@ a draw
 
 Pomodoro 1:
 
-[] create function for creating empty board (9 empty ' ')
-    [] test - check expected board and length of the list 
+[x] create function for creating empty board (9 empty ' ')
+    [x] test - check expected board and length of the list 
 [] create function  choose_starting_player() for randomly chosen first player (X or O)
     [] test for function
