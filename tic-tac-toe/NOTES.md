@@ -14,7 +14,7 @@ Pomodoro 2:
 [x] create function for switching players
         eg. input - 'X'
             output - 'O'
-    [] test for the switching players function 
+    [x] test for the switching players function 
 [] create function for checking the available moves (free spots)
             input - board (as a list)
             output - list with indexes of free spots in board

@@ -11,3 +11,6 @@ def switch_player(player):
         return 'O'
     else:
         return 'X'
+
+def get_available_moves():
+    return None 
