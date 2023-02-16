@@ -23,14 +23,21 @@ def test_switch_player():
     assert switch_player('O') == 'X'
 
 def test_get_available_moves():
+    """ 
+    check if the available moves of empty board are 9
+    """
     board = create_board()
-    moves = get_available_moves(board)
-    assert len(moves) == 9
+    available_moves  = get_available_moves(board)
+    assert len(available_moves) == 9
+
+    """ 
+    check if the available moves of board with moves in 0., 1. and 2. postion is 6 and if 0,1 and 2 are not present in available moves
+    """
     board[0] = 'X'
     board[1] = 'O'
     board[2] = 'X'
-    moves = get_available_moves(board)
-    assert len(moves) == 6
-    assert 0 not in moves
-    assert 1 not in moves
-    assert 2 not in moves
+    available_moves = get_available_moves(board)
+    assert len(available_moves ) == 6
+    assert 0 not in available_moves 
+    assert 1 not in available_moves 
+    assert 2 not in available_moves 

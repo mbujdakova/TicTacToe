@@ -12,5 +12,10 @@ def switch_player(player):
     else:
         return 'X'
 
-def get_available_moves():
-    return None 
+def get_available_moves(board):
+    moves = []
+    for i in range(len(board)):
+        if board[i] == ' ':
+            moves.append(i)
+    return moves
+
