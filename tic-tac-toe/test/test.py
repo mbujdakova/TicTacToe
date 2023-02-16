@@ -1,4 +1,4 @@
-from TicTacToe import create_board, choose_starting_player, switch_player, get_available_moves
+from TicTacToe import create_board, choose_starting_player, switch_player, get_available_moves, player_move
 from unittest.mock import patch
 
 def test_create_board():
@@ -41,3 +41,10 @@ def test_get_available_moves():
     assert 0 not in available_moves 
     assert 1 not in available_moves 
     assert 2 not in available_moves 
+
+@patch('random.choice', return_value=4)
+def test_player_move(mock_choice):
+    board = ['O', 'X', 'O', ' ', ' ', 'X', ' ', ' ', 'X']
+    player = 'X'
+    player_move(board, player)
+    assert board == ['O', 'X', 'O', ' ', 'X', 'X', ' ', ' ', 'X']

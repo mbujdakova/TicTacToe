@@ -21,4 +21,8 @@ Pomodoro 2:
 [] create function for randomly chosen move from list of free spots
 
 Pomodoro 3:
+[x] create function for randomly chosen move from list of free spots
+    [x] test
+[] create function for making move (random move)
+    [] test 
 

@@ -19,3 +19,9 @@ def get_available_moves(board):
             moves.append(i)
     return moves
 
+def player_move(board, player):
+    moves = get_available_moves(board)
+    move = random.choice(moves)
+    board[move] = player
+    return move
+

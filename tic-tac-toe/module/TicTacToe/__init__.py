@@ -1,1 +1,1 @@
-from TicTacToe.tic_tac_toe import create_board, choose_starting_player, switch_player, get_available_moves
+from TicTacToe.tic_tac_toe import create_board, choose_starting_player, switch_player, get_available_moves, player_move
