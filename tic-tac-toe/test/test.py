@@ -1,4 +1,4 @@
-from TicTacToe import create_board, choose_starting_player, switch_player, get_available_moves, player_move
+from TicTacToe import create_board, choose_starting_player, switch_player, get_available_moves, player_move, make_move
 from unittest.mock import patch
 
 def test_create_board():
@@ -46,5 +46,14 @@ def test_get_available_moves():
 def test_player_move(mock_choice):
     board = ['O', 'X', 'O', ' ', ' ', 'X', ' ', ' ', 'X']
     player = 'X'
-    player_move(board, player)
+    exp_move = player_move(board, player)
     assert board == ['O', 'X', 'O', ' ', 'X', 'X', ' ', ' ', 'X']
+    assert exp_move == 4
+
+def test_make_move():
+    board = ['X', 'O', 'X', 'O', ' ', ' ', ' ', ' ', ' ']
+    move = 4
+    player = 'X'
+    make_move(board, move, player)
+    assert board == ['X', 'O', 'X', 'O', 'X', ' ', ' ', ' ', ' ']
+
