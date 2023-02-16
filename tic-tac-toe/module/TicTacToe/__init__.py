@@ -1,1 +1,1 @@
-from TicTacToe.tic_tac_toe import create_board
+from TicTacToe.tic_tac_toe import create_board, choose_starting_player
